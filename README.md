@@ -38,8 +38,105 @@ The **Gut Microbiome Analysis Dashboard** is a computational biology tool design
 ## 📦 Installation & Local Setup
 
 To set up and run this dashboard locally, ensure you have Python installed, then execute the following commands in your terminal:
-
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/HarshithKrishnaK/Omics-Lab-EL.git](https://github.com/HarshithKrishnaK/Omics-Lab-EL.git)
 cd Omics-Lab-EL
+
+## 🚀 How to Run the Application
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/HarshithKrishnaK/Omics-Lab-EL.git
+cd Omics-Lab-EL
+```
+
+### 2. Create and Activate a Virtual Environment
+
+```bash
+# Create virtual environment
+python -m venv .venv
+
+# Activate on Windows
+.venv\Scripts\activate
+
+# Activate on macOS/Linux
+source .venv/bin/activate
+```
+
+### 3. Install Required Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Launch the Dashboard
+
+```bash
+streamlit run app_updated.py
+```
+
+### 5. Open the Dashboard
+
+After the server starts, Streamlit will automatically open the application in your browser.
+
+If it doesn't open automatically, visit:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## 📖 How to Use
+
+### Step 1: Upload a Microbiome Dataset
+
+* Use the file uploader in the sidebar.
+* Upload a `.tsv` file containing:
+
+  * `Taxon`
+  * `Relative_Abundance`
+
+You can also test the dashboard using the sample file:
+
+```text
+india_species_abundance_clean.tsv
+```
+
+### Step 2: Analyze Microbiome Health
+
+The dashboard automatically calculates:
+
+* Shannon Diversity Index
+* Firmicutes:Bacteroidetes Ratio
+* Butyrate Producer Ratio
+* Pathobiont Load
+* Species Richness
+
+### Step 3: Review Clinical Risk Assessment
+
+* Compare results with Healthy and T2D reference cohorts.
+* View microbiome health status and dysbiosis indicators.
+* Explore the T2D pathogenesis cascade.
+
+### Step 4: Simulate Therapeutic Interventions
+
+Use the intervention simulator to test:
+
+* Prebiotics (Inulin/FOS)
+* Probiotics (*Akkermansia muciniphila*)
+* Antibiotic perturbations
+
+Observe projected changes in microbial composition and health metrics in real time.
+
+### Step 5: Interpret Results
+
+The dashboard provides:
+
+* Ecological health metrics
+* Dysbiosis assessment
+* T2D risk indicators
+* Interactive visualizations
+* Predicted intervention outcomes
